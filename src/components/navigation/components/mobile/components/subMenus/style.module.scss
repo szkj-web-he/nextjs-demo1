@@ -1,0 +1,74 @@
+.navigation_mobile__subNavMenus {
+  padding: 2rem 3rem;
+
+  &.navigation_mobile__subNavMenus__abs {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+.navigation_mobile__back {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-flow: row nowrap;
+  color: $neutral_600;
+  @include body_1;
+  margin-bottom: 2.4rem;
+}
+
+.navigation_mobile__backIcon {
+  color: $neutral_600;
+  margin-right: 1.1rem;
+  transform: rotate(180deg);
+}
+
+.navigation_mobile__subMenusHeader {
+  margin-bottom: 2rem;
+  @include h_3;
+  line-height: 2.8rem;
+}
+
+.navigation_mobile__subMenu {
+  list-style: none;
+  border-bottom: 1px solid $neutral_200;
+  padding-bottom: 1.6rem;
+  margin-bottom: 1.6rem;
+  width: 100%;
+}
+.navigationLinkMobile_subItemContent {
+  margin-top: 1.6rem;
+}
+
+.navigation_mobile__subMenuBtn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-flow: row nowrap;
+  width: 100%;
+  @include body_1;
+  color: $neutral_600;
+  transition: all 0.2s linear;
+  box-sizing: border-box;
+  &.navigation_mobile__subMenuBtn__active {
+    font-weight: 500;
+    .navigationLinkMobile_subItemIcon {
+      transform: rotate(90deg);
+    }
+  }
+}
+
+.navigationLinkMobile_subItemIcon {
+  font-size: 1.2rem;
+  color: $neutral_600;
+  transition: all 0.2s linear;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 451px) {
+  .navigation_mobile__subNavMenus {
+    padding: 2rem;
+  }
+}

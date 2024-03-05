@@ -1,0 +1,80 @@
+@mixin Line {
+  background-color: $primary_700;
+  border-radius: 1px;
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  transition: all 0.15s linear;
+}
+
+.navigation_mobileOpenBtn {
+  width: 2rem;
+  height: 2rem;
+  position: relative;
+}
+
+.navigation_mobileOpenLine1 {
+  @include Line;
+  top: 2px;
+}
+
+.navigation_mobileOpenLine2 {
+  @include Line;
+  top: calc(50% - 1px);
+}
+
+.navigation_mobileOpenLine3 {
+  @include Line();
+  top: calc(100% - 4px);
+}
+
+.navigation_mobileOpenBtn__active {
+  .navigation_mobileOpenLine3 {
+    opacity: 0;
+  }
+  .navigation_mobileOpenLine1 {
+    top: calc(50% - 1px);
+    transform: rotate(45deg);
+  }
+
+  .navigation_mobileOpenLine2 {
+    transform: rotate(-45deg);
+  }
+}
+
+.navigation_mobile__navMenuMain {
+  max-height: calc(100vh - 6.4rem);
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: $white;
+  box-shadow: $shadow_regular;
+  border-radius: 0 0 1px 1px;
+  position: relative;
+  min-height: 54rem;
+}
+
+.navigation_mobile__navMenu {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 6.4rem;
+  width: 100%;
+  left: 0;
+  height: calc(100vh - 6.4rem);
+  z-index: 1;
+}
+
+.navigation_mobile__navMenuTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-flow: column nowrap;
+  min-height: 54rem;
+  padding: 2rem 3rem;
+}
+
+@media screen and (max-width: 451px) {
+  .navigation_mobile__navMenuTop {
+    padding: 2rem;
+  }
+}

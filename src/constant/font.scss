@@ -1,0 +1,218 @@
+/**
+* file: project style font size and font family file
+* date: 2020-07-21
+* author: Frank
+* lastModify: mingzhou.zhang 2022-11-07
+*/
+
+@mixin h_1() {
+  font-size: 3.4rem;
+  line-height: 4.6rem;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+@mixin h_2() {
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  font-weight: 400;
+  letter-spacing: 0.018rem;
+}
+
+@mixin h_3() {
+  font-size: 2rem;
+  line-height: 2.4rem;
+  font-weight: 500;
+  letter-spacing: 0.015rem;
+}
+
+@mixin h_4() {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  font-weight: 500;
+  letter-spacing: 0.015rem;
+}
+
+@mixin subtitle_1() {
+  font-size: 2.8rem;
+  line-height: 3.6rem;
+  font-weight: 400;
+  letter-spacing: 0.018rem;
+}
+
+@mixin subtitle_2() {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  font-weight: 400;
+  letter-spacing: 0.015rem;
+}
+
+@mixin subtitle_3() {
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  font-weight: 500;
+  letter-spacing: 0.01rem;
+}
+
+@mixin body_1() {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  font-weight: 400;
+  letter-spacing: 0.05rem;
+}
+
+@mixin body_2() {
+  font-size: 1.4rem;
+  line-height: 2rem;
+  font-weight: 400;
+  letter-spacing: 0.025rem;
+}
+
+@mixin body_3() {
+  font-size: 1.4rem;
+  line-height: 2rem;
+  font-weight: 300;
+  letter-spacing: 0.025rem;
+}
+
+@mixin label() {
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  font-weight: 400;
+  letter-spacing: 0.04rem;
+}
+
+@mixin overline() {
+  font-size: 1rem;
+  line-height: 1.4rem;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+}
+/**
+* Font variable for chinese
+*/
+@mixin c_h_1() {
+  font-size: 3.4rem;
+  line-height: 5.2rem;
+  font-weight: 500;
+  letter-spacing: 0.02rem;
+}
+
+@mixin c_h_2() {
+  font-size: 3.2rem;
+  line-height: 4.8rem;
+  font-weight: 500;
+  letter-spacing: 0.02rem;
+}
+
+@mixin c_h_3() {
+  font-size: 2.8rem;
+  line-height: 4.2rem;
+  font-weight: 500;
+  letter-spacing: 0.02rem;
+}
+
+@mixin c_h_4() {
+  font-size: 2.4rem;
+  line-height: 3.6rem;
+  font-weight: 500;
+  letter-spacing: 0.02rem;
+}
+
+@mixin c_h_5() {
+  font-size: 2rem;
+  line-height: 3rem;
+  font-weight: 500;
+  letter-spacing: 0.02rem;
+}
+
+@mixin c_h_6() {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  font-weight: 500;
+  letter-spacing: 0.02rem;
+}
+
+@mixin c_h_7() {
+  font-size: 1.4rem;
+  line-height: 2rem;
+  font-weight: 500;
+  letter-spacing: 0.02rem;
+}
+
+@mixin c_subtitle_1() {
+  font-size: 3.4rem;
+  line-height: 5.2rem;
+  font-weight: 400;
+  letter-spacing: 0.02rem;
+}
+
+@mixin c_subtitle_2() {
+  font-size: 3.2rem;
+  line-height: 4.8rem;
+  font-weight: 400;
+  letter-spacing: 0.02rem;
+}
+
+@mixin c_subtitle_3() {
+  font-size: 2.8rem;
+  line-height: 4.2rem;
+  font-weight: 400;
+  letter-spacing: 0.02rem;
+}
+
+@mixin c_subtitle_4() {
+  font-size: 2.4rem;
+  line-height: 3.6rem;
+  font-weight: 400;
+  letter-spacing: 0.02rem;
+}
+
+@mixin c_subtitle_5() {
+  font-size: 2rem;
+  line-height: 3rem;
+  font-weight: 400;
+  letter-spacing: 0.02rem;
+}
+
+@mixin c_body_1() {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  font-weight: 400;
+  letter-spacing: 0.02rem;
+}
+
+@mixin c_body_2() {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  font-weight: 300;
+  letter-spacing: 0.02rem;
+}
+
+@mixin c_body_3() {
+  font-size: 1.4rem;
+  line-height: 2rem;
+  font-weight: 400;
+  letter-spacing: 0.02rem;
+}
+
+@mixin c_body_4() {
+  font-size: 1.4rem;
+  line-height: 2rem;
+  font-weight: 300;
+  letter-spacing: 0.02rem;
+}
+
+@mixin c_label_1() {
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  font-weight: 400;
+  letter-spacing: 0.05rem;
+}
+
+@mixin c_label_2() {
+  font-size: 1rem;
+  line-height: 1.6rem;
+  font-weight: 400;
+  letter-spacing: 0.05rem;
+}

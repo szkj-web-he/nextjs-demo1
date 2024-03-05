@@ -1,0 +1,37 @@
+.navigation_desk__split {
+  width: 1px;
+  height: 1.6rem;
+  background-color: $neutral_200;
+  margin-right: 3.2rem;
+}
+
+.navigation_desk__signUp {
+  margin-right: 2.4rem;
+  background: linear-gradient(97deg, #22a6b3 0%, #50dae5 94.54%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  @include c_body_3;
+  text-decoration: none;
+}
+
+.navigation_desk__signIn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 7.2rem;
+  height: 2.8rem;
+  border-radius: 6px;
+  background: linear-gradient(97deg, #22a6b3 0%, #50dae5 94.54%);
+  @include c_body_3;
+  line-height: initial;
+  color: $white;
+  text-decoration: none;
+}
+
+.navigation_desk {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-flow: row nowrap;
+}

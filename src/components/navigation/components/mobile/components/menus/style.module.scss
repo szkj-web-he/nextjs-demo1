@@ -1,0 +1,72 @@
+.navigation_mobile__navItem {
+  margin-bottom: 2.4rem;
+  box-sizing: border-box;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.navigation_mobile__navItemLink {
+  color: $neutral_600;
+  @include body_1;
+  width: 100%;
+  display: block;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.navigationLinkMobile_dropdownIcon {
+  font-size: 1.2rem;
+  color: $neutral_600;
+}
+
+.navigation_mobile__navItemText {
+  color: $neutral_600;
+  @include body_1;
+}
+
+.navigation_mobile__width {
+  width: 100%;
+}
+
+.navigation_mobile__navItemBtn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-flow: row nowrap;
+  width: 100%;
+}
+
+.navigation_mobile__navItem {
+  list-style: none;
+}
+
+.navigation_mobile__hr {
+  width: 100%;
+  height: 1px;
+  background-color: #ebebeb;
+  margin: 4.8rem 0 2.4rem 0;
+}
+
+.navigation_mobile__signIn {
+  width: 100%;
+  @include body_1;
+  text-align: left;
+  color: $primary_600;
+  display: block;
+  text-decoration: none;
+}
+
+.navigation_mobile__signUp {
+  width: 15.8rem;
+  height: 3.6rem;
+  border-radius: 6px;
+  background-color: #22a6b3;
+  @include body_1;
+  color: $white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row nowrap;
+  text-decoration: none;
+}

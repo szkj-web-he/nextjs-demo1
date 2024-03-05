@@ -1,0 +1,39 @@
+/**
+* @file 导航栏的调整按钮的交互样式
+* @date 2024-02-24
+* @author xuejie.he
+* @lastModify xuejie.he 2024-02-24
+*/
+
+.navigation_desk__navItem__hover {
+  &[class*="navigation_desk__navItemBtn"] {
+    @include c_h_6;
+    color: $primary_600;
+    line-height: 6.4rem;
+  }
+  [class*="navigation_desk__navItemLink"] {
+    @include c_h_6;
+    color: $primary_600;
+    line-height: 6.4rem;
+  }
+  .navigation_desk__navItem__dropdown {
+    transform: rotate(180deg);
+  }
+}
+
+.navigation_desk__navItem__active {
+  [class*="navigation_desk__navItemLink"] {
+    @include c_h_6;
+    color: $primary_600;
+    line-height: 6.4rem;
+  }
+  &::after {
+    width: 40% !important;
+  }
+}
+
+.navigation_desk__navItem__dropdown {
+  transition: all 50ms linear;
+  font-size: 1.2rem;
+  margin-left: 1.2rem;
+}
