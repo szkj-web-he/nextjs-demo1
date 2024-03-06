@@ -4,6 +4,7 @@
  * @author xuejie.he
  * @lastModify xuejie.he 2024-02-24
  */
+"use client";
 /* <------------------------------------ **** DEPENDENCE IMPORT START **** ------------------------------------ */
 /** This section will include all the necessary dependence for this tsx file */
 import { ActionType, useCssTransition } from "@/hooks/useCssTransition";

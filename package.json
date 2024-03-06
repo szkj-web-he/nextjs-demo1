@@ -6,8 +6,8 @@
     "dev": "next dev",
     "start": "next start",
     "lint": "next lint",
-    "buildV2": "dotenv -c .env.buildV2 next build",
-    "testV2": "dotenv -c .env.testV2 next build",
+    "buildV2": "next build",
+    "testV2": "next build",
     "releases": "next build"
   },
   "dependencies": {

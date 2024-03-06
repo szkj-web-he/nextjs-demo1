@@ -42,7 +42,7 @@ export const useDomDisplay = <T extends Element | null>(
           if (data.intersectionRatio >= 0.5) {
             setOpacity(1);
           } else {
-            setOpacity(Math.round((data.intersectionRatio + 0.3) * 100) / 100);
+            setOpacity(Math.round(data.intersectionRatio * 200) / 100);
           }
 
           setShow(entries[0].isIntersecting);

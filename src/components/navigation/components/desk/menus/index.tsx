@@ -18,15 +18,6 @@ interface TempProps {}
 /* <------------------------------------ **** INTERFACE END **** ------------------------------------ */
 /* <------------------------------------ **** FUNCTION COMPONENT START **** ------------------------------------ */
 const Temp: React.FC<TempProps> = () => {
-  /* <------------------------------------ **** STATE START **** ------------------------------------ */
-  /************* This section will include this component HOOK function *************/
-  /* <------------------------------------ **** STATE END **** ------------------------------------ */
-  /* <------------------------------------ **** PARAMETER START **** ------------------------------------ */
-  /************* This section will include this component parameter *************/
-  /* <------------------------------------ **** PARAMETER END **** ------------------------------------ */
-  /* <------------------------------------ **** FUNCTION START **** ------------------------------------ */
-  /************* This section will include this component general function *************/
-  /* <------------------------------------ **** FUNCTION END **** ------------------------------------ */
   return (
     <ul className={styles.navigation_desk__navMenu}>
       <li className={styles.navigation_desk__navItem}>

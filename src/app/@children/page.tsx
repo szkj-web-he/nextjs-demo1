@@ -8,14 +8,11 @@
 /** This section will include all the necessary dependence for this tsx file */
 import React from "react";
 import styles from "./style.module.scss";
-import Page1 from "./_componts/page1";
+import Page1 from "./_components/page1";
 /* <------------------------------------ **** DEPENDENCE IMPORT END **** ------------------------------------ */
-/* <------------------------------------ **** INTERFACE START **** ------------------------------------ */
-/** This section will include all the interface for this tsx file */
-interface TempProps {}
-/* <------------------------------------ **** INTERFACE END **** ------------------------------------ */
+
 /* <------------------------------------ **** FUNCTION COMPONENT START **** ------------------------------------ */
-const Temp: React.FC<TempProps> = () => {
+const Temp: React.FC = () => {
   /* <------------------------------------ **** STATE START **** ------------------------------------ */
   /************* This section will include this component HOOK function *************/
   /* <------------------------------------ **** STATE END **** ------------------------------------ */

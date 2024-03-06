@@ -1,0 +1,25 @@
+/**
+* @file 
+* @date 2024-03-04
+* @author xuejie.he
+* @lastModify xuejie.he 2024-03-04
+*/
+
+.page1_wrapper {
+  width: 100vw;
+  min-height: 108rem;
+  height: 100vh;
+  background-image: url("../../../../../../assets/images/bg_banner.png");
+  background-size: cover;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  margin-top: -6.4rem;
+  transition: all 0.2s linear;
+}
+
+.page1_body {
+  width: 140rem;
+  margin: 0 auto;
+  position: relative;
+}

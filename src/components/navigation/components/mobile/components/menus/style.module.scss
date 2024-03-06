@@ -29,7 +29,7 @@
   width: 100%;
 }
 
-.navigation_mobile__navItemBtn {
+.navigation_mobile__navItemBtn[class*="btn_wrapper"] {
   display: flex;
   align-items: center;
   justify-content: space-between;

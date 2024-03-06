@@ -4,6 +4,7 @@
  * @author xuejie.he
  * @lastModify xuejie.he 2023-08-17
  */
+"use client";
 /* <------------------------------------ **** DEPENDENCE IMPORT START **** ------------------------------------ */
 /** This section will include all the necessary dependence for this tsx file */
 import React, {
