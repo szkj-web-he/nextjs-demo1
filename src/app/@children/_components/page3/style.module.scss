@@ -1,0 +1,19 @@
+.page3_main {
+  width: 120rem;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(20%);
+  transition: all 0.15s ease;
+  &.page3_main__active {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+.page3_tips {
+  @include c_subtitle_5;
+  color: $neutral_500;
+  text-align: center;
+  margin-top: 7.5rem;
+  padding: 0 11rem;
+}

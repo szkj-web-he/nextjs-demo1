@@ -1,0 +1,15 @@
+.imageViewer_img {
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: block;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  pointer-events: auto;
+  max-width: 100%;
+  max-height: 100%;
+  transition: all 0.2s linear;
+  object-fit: contain;
+  object-position: center;
+}

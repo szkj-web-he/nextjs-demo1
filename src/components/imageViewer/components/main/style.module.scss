@@ -1,0 +1,46 @@
+.imageViewer_close {
+  position: absolute;
+  top: 12rem;
+  right: 12rem;
+  border-radius: 50%;
+  width: 6rem;
+  height: 6rem;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row nowrap;
+  cursor: pointer;
+  pointer-events: auto;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: all 0.15s linear;
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+.imageViewer_closeIcon {
+  font-size: 2rem;
+  color: $white;
+}
+
+.imageViewer_loading {
+  width: 30rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 30rem;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.imageViewer_imgContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.1s linear;
+}

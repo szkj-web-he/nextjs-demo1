@@ -1,0 +1,81 @@
+@mixin Circle {
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  background-color: $white;
+  position: absolute;
+}
+
+.page2_pluginRectContainer {
+  position: relative;
+}
+
+.page2_pluginIconContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page2_pluginRect {
+  width: 4.3rem;
+  height: 4.3rem;
+  border-radius: 0.6rem;
+  background-color: rgba(163, 241, 241, 0.4);
+  box-shadow:
+    0.32px 0.32px 0.32px 0px #9de4e8 inset,
+    -0.32px -0.32px 0.32px 0px #d4fff4 inset;
+  backdrop-filter: blur(3.200000286102295px);
+  position: relative;
+  transition: all 0.15s linear;
+}
+
+.page2_pluginRectCircle1 {
+  @include Circle;
+  top: 50%;
+  margin-top: -0.6rem;
+  right: -0.4rem;
+}
+
+.page2_pluginRectCircle2 {
+  @include Circle;
+  top: 100%;
+  margin-top: -0.8rem;
+  left: 50%;
+  margin-left: -0.6rem;
+}
+
+.page2_pluginRectIcon {
+  position: absolute;
+  top: 9px;
+  left: 8px;
+}
+
+.page2_pluginRectCircle1__out {
+  @include Circle;
+  background: linear-gradient(180deg, #3cbbc7 0%, #67cdd6 100%);
+  box-shadow:
+    -0.32px -0.32px 0.32px 0px #0ac7d9 inset,
+    0.32px 0.32px 0.32px 0px #cefcf0 inset;
+  top: -0.4rem;
+  left: 50%;
+  margin-left: -0.6rem;
+}
+
+.page2_pluginRectCircle2__out {
+  @include Circle;
+  background: linear-gradient(180deg, #3cbbc7 0%, #67cdd6 100%);
+  box-shadow:
+    -0.32px -0.32px 0.32px 0px #0ac7d9 inset,
+    0.32px 0.32px 0.32px 0px #cefcf0 inset;
+  left: -0.4rem;
+  top: 50%;
+  margin-top: -0.6rem;
+}
+
+.page2_pluginIconContainer__active {
+  .page2_pluginRect {
+    transform: scale(0.85);
+  }
+}

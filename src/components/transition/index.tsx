@@ -136,60 +136,62 @@ interface TransitionProps
 }
 /* <------------------------------------ **** INTERFACE END **** ------------------------------------ */
 /* <------------------------------------ **** FUNCTION COMPONENT START **** ------------------------------------ */
-export const Transition: React.FC<TransitionProps> = (
-  {
-    show,
-    children,
-    firstAnimation = false,
-    handleTransitionEnd,
-    handleTransitionStart,
-    handleTransitionCancel,
-    removeOnHidden = false,
-    cache,
-    ...props
-  },
-  ref
-) => {
-  Transition.displayName = "Transition";
-  /* <------------------------------------ **** STATE START **** ------------------------------------ */
-  /************* This section will include this component HOOK function *************/
-  const [endFn, isRemove, isFirst, visible] = useRemoveOnHidden(
-    show,
-    removeOnHidden,
-    cache
-  );
+export const Transition = forwardRef<HTMLDivElement | null, TransitionProps>(
+  (
+    {
+      show,
+      children,
+      firstAnimation = false,
+      handleTransitionEnd,
+      handleTransitionStart,
+      handleTransitionCancel,
+      removeOnHidden = false,
+      cache,
+      ...props
+    },
+    ref
+  ) => {
+    Transition.displayName = "Transition";
+    /* <------------------------------------ **** STATE START **** ------------------------------------ */
+    /************* This section will include this component HOOK function *************/
+    const [endFn, isRemove, isFirst, visible] = useRemoveOnHidden(
+      show,
+      removeOnHidden,
+      cache
+    );
 
-  /* <------------------------------------ **** STATE END **** ------------------------------------ */
-  /* <------------------------------------ **** PARAMETER START **** ------------------------------------ */
-  /************* This section will include this component parameter *************/
-  /* <------------------------------------ **** PARAMETER END **** ------------------------------------ */
-  /* <------------------------------------ **** FUNCTION START **** ------------------------------------ */
-  /************* This section will include this component general function *************/
+    /* <------------------------------------ **** STATE END **** ------------------------------------ */
+    /* <------------------------------------ **** PARAMETER START **** ------------------------------------ */
+    /************* This section will include this component parameter *************/
+    /* <------------------------------------ **** PARAMETER END **** ------------------------------------ */
+    /* <------------------------------------ **** FUNCTION START **** ------------------------------------ */
+    /************* This section will include this component general function *************/
 
-  if (isRemove) {
-    return <></>;
+    if (isRemove) {
+      return <></>;
+    }
+    /* <------------------------------------ **** FUNCTION END **** ------------------------------------ */
+    return (
+      <Main
+        show={visible}
+        ref={ref}
+        isTransition={isFirst ? firstAnimation : true}
+        handleTransitionStart={handleTransitionStart}
+        handleTransitionEnd={(status) => {
+          handleTransitionEnd?.(status);
+          endFn();
+        }}
+        handleTransitionCancel={(status) => {
+          handleTransitionCancel?.(status);
+          endFn();
+        }}
+        {...props}
+      >
+        {children}
+      </Main>
+    );
   }
-  /* <------------------------------------ **** FUNCTION END **** ------------------------------------ */
-  return (
-    <Main
-      show={visible}
-      ref={ref}
-      isTransition={isFirst ? firstAnimation : true}
-      handleTransitionStart={handleTransitionStart}
-      handleTransitionEnd={(status) => {
-        handleTransitionEnd?.(status);
-        endFn();
-      }}
-      handleTransitionCancel={(status) => {
-        handleTransitionCancel?.(status);
-        endFn();
-      }}
-      {...props}
-    >
-      {children}
-    </Main>
-  );
-};
+);
 /* <------------------------------------ **** FUNCTION COMPONENT END **** ------------------------------------ */
 
 const Main = forwardRef<

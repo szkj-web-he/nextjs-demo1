@@ -45,7 +45,7 @@ export const useDomDisplay = <T extends Element | null>(
             setOpacity(Math.round(data.intersectionRatio * 200) / 100);
           }
 
-          setShow(entries[0].isIntersecting);
+          setShow(data.intersectionRatio > 0.5);
         },
         {
           root: null,

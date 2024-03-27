@@ -11,11 +11,12 @@ import { navLinks } from "@/defaultData/navigationBar";
 import classNames from "@/functions/classNames";
 import Link from "next/link";
 import React from "react";
-import TransitionWrapper from "./components/TransitionWrapper";
+import TransitionWrapper from "./components/transitionWrapper";
 import Tabs from "./components/tabs";
 import Wrapper from "./components/wrapper";
 import styles from "./style.module.scss";
 import FeatureItem from "./components/featureItem";
+import Imgs from "./components/imgs";
 /* <------------------------------------ **** DEPENDENCE IMPORT END **** ------------------------------------ */
 /* <------------------------------------ **** FUNCTION COMPONENT START **** ------------------------------------ */
 const Temp: React.FC = () => {
@@ -108,6 +109,7 @@ const Temp: React.FC = () => {
           </ul>
         </FeatureItem>
       </div>
+      <Imgs />
     </Wrapper>
   );
 };

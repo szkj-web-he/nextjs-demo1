@@ -9,9 +9,9 @@
 "use client";
 import { navLinks } from "@/defaultData/navigationBar";
 import classNames from "@/functions/classNames";
-import useEventListener from "@/hooks/useEventListener";
+import { useMobile } from "@/hooks/useMobile";
 import { usePathname } from "next/navigation";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Skeleton } from "../skeleton";
 import Desk from "./components/desk";
 import Logo from "./components/logo";
@@ -23,7 +23,8 @@ import styles from "./style.module.scss";
 export const Navigation: React.FC = () => {
   /* <------------------------------------ **** STATE START **** ------------------------------------ */
   /************* This section will include this component HOOK function *************/
-  const [show, setShow] = useState<boolean>();
+  // const [show, setShow] = useState<boolean>();
+  const isMobile = useMobile();
   /**
    * 二级菜单是否打开
    */
@@ -33,17 +34,9 @@ export const Navigation: React.FC = () => {
    */
   const pathname = usePathname();
 
-  useEffect(() => {
-    setShow(window.matchMedia("(max-width: 1024px)").matches);
-  }, []);
-
-  useEventListener("resize", () => {
-    setShow(window.matchMedia("(max-width: 1024px)").matches);
-  });
-
   const content = () => {
-    if (typeof show === "boolean") {
-      return show ? <Mobile /> : <Desk />;
+    if (typeof isMobile === "boolean") {
+      return isMobile ? <Mobile /> : <Desk />;
     }
     return <Skeleton variant="rect" width="2rem" height="2rem" />;
   };

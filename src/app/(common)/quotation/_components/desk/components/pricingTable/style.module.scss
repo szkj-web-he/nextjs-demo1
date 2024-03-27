@@ -1,0 +1,249 @@
+/********************** mixin部分 start ************************************/
+
+@mixin Col {
+  border-right: 1px solid $neutral_200;
+  border-bottom: 1px solid $neutral_200;
+  flex: 0 0 auto;
+}
+
+@mixin CenterCol {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column nowrap;
+  padding: 0.8rem 0;
+}
+
+@mixin GradientButton {
+  color: $white;
+  @include c_h_7;
+  padding: 0.6rem 3.2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row nowrap;
+  border-radius: 10rem;
+}
+
+/********************** mixin部分 end ************************************/
+
+.quotation_pricingTable {
+  border-radius: 1.2rem;
+  margin: 10.1rem auto 0;
+  overflow: hidden;
+  max-width: 120rem;
+  width: calc(100% - 3.2rem * 2);
+  box-shadow: $shadow_regular;
+  background-color: $neutral_50;
+}
+
+.quotation_pricingTableRow {
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  flex-flow: row nowrap;
+  overflow: hidden;
+}
+
+.quotation_pricingTableCol {
+  @include Col();
+  width: 17%;
+  text-align: center;
+}
+
+.quotation_pricingTableColOne {
+  @include Col();
+  width: 28.1rem;
+}
+
+.quotation_pricingTableColLast {
+  @include Col();
+  width: calc(100% - 28.1rem - 17% * 3);
+  border-right: 0;
+  text-align: center;
+}
+
+.quotation_pricingTableHeadTips {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  background-color: rgba($neutral_600, 0.5);
+  color: $white;
+  padding: 0.2rem 0.8rem;
+  border-radius: 0 1.2rem 0 1.2rem;
+  @include c_label_1;
+  p {
+    margin-bottom: 0;
+    margin-right: 0.4rem;
+  }
+  b {
+    @include c_h_7;
+    color: $yellow_600;
+  }
+}
+
+.quotation_neutral200 {
+  background-color: $neutral_200;
+}
+
+.quotation_colorWhite {
+  color: $white;
+}
+
+.quotation_ch4 {
+  @include c_h_4;
+  text-align: center;
+  margin-bottom: 0.4rem;
+}
+
+.quotation_cBody3 {
+  @include c_body_3;
+  text-align: center;
+}
+
+.quotation_colorNeutral400 {
+  color: $neutral_400;
+}
+
+.quotation_pricingTableHead {
+  .quotation_pricingTableColOne {
+    background-color: $neutral_50;
+    position: relative;
+  }
+
+  .quotation_pricingTableCol {
+    padding: 0.8rem 0;
+    &:nth-child(2) {
+      background-color: $neutral_200;
+    }
+    &:nth-child(3) {
+      background-color: $primary_300;
+    }
+    &:nth-child(4) {
+      background-color: $primary_500;
+    }
+  }
+
+  .quotation_pricingTableColLast {
+    padding: 0.8rem 0;
+    position: relative;
+    background: linear-gradient(
+      270deg,
+      #ff8f0f 0%,
+      #ff7745 36.68%,
+      #f2c94c 100%
+    );
+  }
+}
+
+.quotation_leftBottomAbs {
+  position: absolute;
+  left: 2rem;
+  bottom: 1.6rem;
+}
+.quotation_rightTopAbs {
+  position: absolute;
+  right: 2rem;
+  top: 1.6rem;
+}
+
+.quotation_cBody1 {
+  @include c_body_1;
+  color: $neutral_400;
+}
+
+.quotation_pricingTableSplit {
+  width: 300%;
+  height: 1px;
+  background-color: $neutral_200;
+  top: 0;
+  left: 0;
+  transform: rotate(15deg);
+  transform-origin: left center;
+  position: absolute;
+}
+
+.quotation_pricingTableBody {
+  .quotation_pricingTableColOne {
+    display: inline-flex;
+    flex: 0 0 auto;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0.8rem 0 0.8rem 2rem;
+    flex-flow: column nowrap;
+  }
+
+  .quotation_pricingTableCol {
+    @include CenterCol;
+
+    &:nth-child(2) {
+      background-color: $neutral_100;
+    }
+    &:nth-child(3) {
+      background-color: $bg;
+    }
+    &:nth-child(4) {
+      background-color: $primary_50;
+    }
+  }
+
+  .quotation_pricingTableColLast {
+    @include CenterCol;
+    background-color: $warning_50;
+  }
+}
+
+.quotation_ch3 {
+  @include c_h_3;
+  margin-bottom: 0.8rem;
+}
+
+.quotation_colorPrimary600 {
+  color: $primary_600;
+}
+
+.quotation_colorTextGradient {
+  background: linear-gradient(270deg, #ff8f0f 0%, #ff7745 36.68%, #f2c94c 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.quotation_gradientButton {
+  @include GradientButton;
+  background: linear-gradient(97deg, #22a6b3 0%, #50dae5 94.54%);
+}
+
+.quotation_linkText {
+  text-decoration: none;
+}
+
+.quotation_otherGradientButton {
+  @include GradientButton;
+  background: linear-gradient(270deg, #ff8f0f 0%, #ff7745 36.68%, #f2c94c 100%);
+}
+
+.quotation_padding20 {
+  .quotation_pricingTableCol,
+  .quotation_pricingTableColLast {
+    padding: 2rem 0;
+  }
+}
+/********************** media部分 start ************************************/
+@media screen and (max-width: 1200px) {
+  .tableHeader_container {
+    > div {
+      &:first-child {
+        width: 30%;
+      }
+      &:last-child {
+        border-right: 0;
+        width: 20%;
+      }
+    }
+  }
+}
+/********************** media部分 end ************************************/

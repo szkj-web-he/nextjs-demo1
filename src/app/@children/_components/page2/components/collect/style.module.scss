@@ -1,0 +1,55 @@
+.page2_collectIconCircle {
+  width: 4.6rem;
+  height: 4.6rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #00acc4 0%, #70efde 100%);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row nowrap;
+
+  &::after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background-color: $white;
+    border-radius: 50%;
+  }
+}
+
+.page2_collectIconContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row nowrap;
+}
+
+.page2_collectIconRect {
+  width: calc(50% + 3px);
+  height: calc(50% + 3px);
+  overflow: hidden;
+  position: absolute;
+  top: -3px;
+  left: 50%;
+  transform-origin: bottom left;
+  transition: all 0.15s linear;
+}
+
+.page2_collectIconRectCircle {
+  width: 200%;
+  margin-left: -100%;
+  height: 200%;
+  border-radius: 50%;
+  background-color: rgba(210, 250, 250, 0.6);
+  box-shadow: 0px 0.2px 2px 0px rgba(255, 255, 255, 0.8) inset;
+  backdrop-filter: blur(2px);
+}
+
+.page2_collectIconContainer__active {
+  .page2_collectIconRect {
+    transform: rotate(90deg);
+  }
+}

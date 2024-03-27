@@ -7,11 +7,14 @@
 "use client";
 /* <------------------------------------ **** DEPENDENCE IMPORT START **** ------------------------------------ */
 /** This section will include all the necessary dependence for this tsx file */
+import banner from "@/assets/images/bg_banner.png";
+import { SkeletonLoading } from "@/components/skeletonLoading";
+import { useDomDisplay } from "@/hooks/useDomDisplay";
+import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 import { ActiveIndexContext } from "../../context/activeIndex";
-import { useDomDisplay } from "@/hooks/useDomDisplay";
-import styles from "./style.module.scss";
 import { ChangeActiveIndexContext } from "../../context/changeIndex";
+import styles from "./style.module.scss";
 /* <------------------------------------ **** DEPENDENCE IMPORT END **** ------------------------------------ */
 
 interface TempProps {
@@ -43,6 +46,10 @@ const Temp: React.FC<TempProps> = ({ children }) => {
    * 是否在滚动后变得不可见
    */
   const [opacity, show] = useDomDisplay(ref);
+  /**
+   * 图片是否准备好
+   */
+  const [loading, setLoading] = useState(true);
 
   /* <------------------------------------ **** STATE END **** ------------------------------------ */
   /* <------------------------------------ **** PARAMETER START **** ------------------------------------ */
@@ -93,8 +100,16 @@ const Temp: React.FC<TempProps> = ({ children }) => {
     <ActiveIndexContext.Provider value={index}>
       <ChangeActiveIndexContext.Provider value={handleChangeIndex}>
         <div className={styles.page1_wrapper} style={{ opacity }}>
+          <Image
+            alt=""
+            src={banner}
+            className={styles.page1_bannerImg}
+            onLoad={() => {
+              setLoading(false);
+            }}
+          />
           <div className={styles.page1_body} ref={ref}>
-            {children}
+            {loading ? <SkeletonLoading /> : children}
           </div>
         </div>
       </ChangeActiveIndexContext.Provider>

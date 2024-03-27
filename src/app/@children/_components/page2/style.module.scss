@@ -1,0 +1,27 @@
+.page2_flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-flow: row nowrap;
+  width: 104rem;
+  margin: 0 auto;
+}
+
+.page2_marginBottom100 {
+  margin-bottom: 10rem;
+}
+
+.page2_animateContent {
+  transition: all 0.15s linear;
+  margin: 16rem 0;
+  &.page2_animateContent__active {
+    [class*="page2_flexItem"] {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+.page2_wrapper {
+  padding-top: 16rem;
+}

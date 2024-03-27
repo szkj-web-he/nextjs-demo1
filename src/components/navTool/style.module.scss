@@ -5,42 +5,7 @@
 * @lastModify xuejie.he 2024-02-27
 */
 
-/* <------------------------------------ **** SECTION1 MIXIN START **** ------------------------------------ */
-@mixin flexWrap {
-  width: 120rem;
-  margin: 0 auto;
-  box-sizing: border-box;
-
-  @media (max-width: (1370px)) {
-    width: calc(100% - 18rem);
-  }
-}
-/* <------------------------------------ **** SECTION1 MIXIN END **** ------------------------------------ */
-
 .nav_tool_container {
-  @include flexWrap;
-  position: sticky;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 10;
-  pointer-events: none;
-}
-
-.nav_tool_inner {
-  position: relative;
-  width: 100%;
-}
-
-.nav_tool {
-  position: absolute;
-  left: 100%;
-  transform: translate(2rem);
-  bottom: 6.4rem;
-}
-
-.nav_tool.nav_tool_fixed {
   position: fixed;
   transform: none;
   left: auto;
@@ -48,7 +13,11 @@
   bottom: 6rem;
 }
 
-.nav_tool > div {
+.nav_tool_container > div:last-child {
+  margin-bottom: 0;
+}
+
+.nav_tool_chat {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -60,14 +29,8 @@
   margin-bottom: 2rem;
   font-size: 1.4rem;
   cursor: pointer;
-  pointer-events: all;
-}
+  pointer-events: auto;
 
-.nav_tool > div:last-child {
-  margin-bottom: 0;
-}
-
-.nav_tool_chat {
   &:hover {
     background-color: $primary_500;
     color: $white;
@@ -94,7 +57,7 @@
   }
 }
 
-.nav_tool .nav_tool_backtop {
+.nav_tool_backtop {
   pointer-events: auto;
   cursor: pointer;
 }

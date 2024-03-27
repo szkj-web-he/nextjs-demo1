@@ -1,0 +1,80 @@
+/********************** mixin部分 start ************************************/
+
+@mixin Col {
+  border-right: 1px solid $neutral_200;
+  border-bottom: 1px solid $neutral_200;
+  flex: 0 0 auto;
+}
+
+/********************** mixin部分 end ************************************/
+
+.quotation_otherExpensesTableWrapper {
+  border-radius: 2rem;
+  background: $neutral_50;
+  box-shadow: $shadow_regular;
+  margin: 4rem auto 0;
+  padding: 3.2rem;
+  max-width: 120rem;
+  width: calc(100% - 3.2rem * 2);
+}
+
+.quotation_otherExpensesTitle {
+  @include c_h_3;
+  color: $neutral_600;
+  text-align: center;
+  margin-bottom: 3.2rem;
+}
+
+.quotation_otherExpensesTable {
+  border-radius: 1.2rem;
+  border: 1px solid $neutral_200;
+  background: $neutral_50;
+}
+
+.quotation_otherExpensesTableRow {
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  flex-flow: row nowrap;
+}
+
+.quotation_otherExpensesTableOrder {
+  @include Col;
+  @include body_1;
+  color: $neutral_500;
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row nowrap;
+  width: 6.6rem;
+}
+
+.quotation_otherExpensesTableModule {
+  padding-left: 3.2rem;
+  flex: 0 0 auto;
+  width: 29rem;
+  @include Col;
+  @include c_h_6;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-flow: row nowrap;
+}
+
+.quotation_otherExpensesTableMemo {
+  @include Col;
+  @include c_body_1;
+  color: $neutral_500;
+  width: calc(100% - 6.6rem - 29rem);
+  padding: 1.6rem 3.2rem;
+  border-right: 0;
+}
+
+.quotation_otherExpensesTableColorGradient {
+  background: linear-gradient(270deg, #ff8f0f 0%, #ff7745 69.58%, #f2c94c 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 0.4rem;
+}

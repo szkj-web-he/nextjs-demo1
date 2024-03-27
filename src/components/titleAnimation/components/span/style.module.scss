@@ -1,0 +1,13 @@
+.titleAnimation_spanHidden {
+  opacity: 0;
+  transform: translateY(50%);
+}
+
+.titleAnimation_span {
+  color: $neutral_600;
+  display: inline-block;
+  font-size: 6rem;
+  line-height: 5.2rem;
+  font-weight: 500;
+  color: $neutral_600;
+}

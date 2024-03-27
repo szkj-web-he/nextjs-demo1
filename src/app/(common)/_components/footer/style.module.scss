@@ -1,0 +1,217 @@
+/**
+* @file
+* @date 2022-06-15
+* @author mingzhou.zhang
+* @lastModify  2022-06-15
+*/
+
+/* <------------------------------------ **** SECTION1 MIXIN START **** ------------------------------------ */
+@mixin wrap {
+  max-width: 120rem;
+  margin: 0 auto;
+  width: calc(100% - 3.2rem * 2);
+  @media screen and (max-width: $desktop) {
+    width: calc(100% - 8rem);
+  }
+
+  @media screen and (max-width: $md) {
+    width: calc(100% - 6rem);
+  }
+
+  @media screen and (max-width: $mobile) {
+    width: calc(100% - 4.8rem);
+  }
+}
+
+/* <------------------------------------ **** SECTION1 MIXIN END **** ------------------------------------ */
+.footer_wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: $background;
+  box-shadow: $shadow_small;
+}
+
+.footer_wrapper_top {
+  @include wrap;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 3.2rem;
+}
+
+.footer_hr {
+  width: 100%;
+  height: 0.06rem;
+  background-color: $neutral_300;
+}
+
+.footer_wrapper_bottom {
+  @include wrap;
+  padding: 2.4rem 0;
+}
+
+.footer_leftWrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer_linkGroup {
+  margin-right: 7rem;
+  margin-bottom: 3.2rem;
+}
+
+.footer_linkTitle {
+  @include c_h_6;
+  color: $neutral_500;
+  margin-bottom: 1.6rem;
+}
+
+.footer_linkList {
+  .footer_linkItem:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.footer_linkItem {
+  @include c_body_3;
+  margin-bottom: 1.2rem;
+  display: block;
+  text-decoration: none;
+  color: $neutral_400;
+  transition: all 0.2s linear;
+  &:hover {
+    cursor: pointer;
+    color: $primary_400;
+  }
+}
+
+.footer_language {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.6rem;
+  .footer_language_icon {
+    width: 2rem;
+    height: auto;
+    margin-right: 0.8rem;
+    flex: 0 0 auto;
+    object-fit: cover;
+    object-position: top left;
+  }
+  .footer_language_content {
+    @include c_body_3;
+    color: $neutral_500;
+  }
+}
+
+.footer_linkRight {
+  flex: 0 0 auto;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  justify-content: center;
+  margin-bottom: 2.4rem;
+}
+
+.footer_linkRightItem {
+  @include c_body_3;
+  width: 100%;
+  margin-bottom: 1.2rem;
+  text-decoration: none;
+  color: $neutral_400;
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+  &:hover {
+    cursor: pointer;
+    color: $primary_400;
+  }
+}
+
+.footer_info {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  > span {
+    margin-right: 1.6rem;
+    color: $neutral_400;
+    vertical-align: middle;
+    a {
+      text-decoration: none;
+      color: $neutral_400;
+      &:hover {
+        cursor: pointer;
+        color: $primary_400;
+      }
+    }
+  }
+  .footer_copyright {
+    @include c_body_3;
+  }
+  .footer_filing {
+    @include c_body_3;
+  }
+  .footer_security_record {
+    @include c_body_3;
+    margin-right: 0;
+    > img {
+      vertical-align: middle;
+      margin-right: 0.4rem;
+    }
+  }
+}
+
+/* <--------------------------- * media screen start * --------------------------- */
+
+@media screen and (max-width: $desktop) {
+  .footer_linkGroup {
+    margin-bottom: 2.4rem;
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .footer_wrapper_top {
+    padding-bottom: 0;
+  }
+
+  .footer_leftWrap {
+    flex-direction: column;
+  }
+
+  .footer_linkGroup {
+    margin-bottom: 2.4rem;
+  }
+
+  .footer_linkTitle,
+  .footer_language {
+    margin-bottom: 1.2rem;
+  }
+
+  .footer_info {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 3rem;
+    > span {
+      margin-bottom: 0.8rem;
+    }
+    .footer_security_record {
+      margin-bottom: 0;
+    }
+  }
+}
+
+/* <--------------------------- * media screen end * --------------------------- */
+
+/******* 增值信息start **********/
+.footer_idCard {
+  margin-left: 1.6rem;
+  @include c_body_3();
+  color: $neutral_400;
+  transition: all 0.2s linear;
+  cursor: pointer;
+  &:hover {
+    color: $primary_400;
+  }
+}
+
+/******* 增值信息end **********/

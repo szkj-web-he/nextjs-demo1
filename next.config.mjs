@@ -36,6 +36,9 @@ const nextConfig = {
     `,
   },
   env: envData(),
+  images: {
+    unoptimized: true,
+  },
 };
 
 export default nextConfig;

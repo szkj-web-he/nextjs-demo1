@@ -1,0 +1,32 @@
+.titleAnimation_hr {
+  width: calc(100% + 1.6rem * 2);
+  position: absolute;
+  top: calc(100% + 2.4rem);
+  left: -1.6rem;
+  transform: scaleX(0);
+  height: 2px;
+  border-radius: 2px;
+  background-color: $primary_600;
+  transform-origin: left center;
+}
+
+.titleAnimation_point {
+  position: absolute;
+  left: calc(100% + 1.2rem);
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  background-color: $primary_600;
+  top: 50%;
+  margin-top: -0.6rem;
+  opacity: 0;
+  transition: all 0.15s linear;
+}
+
+.titleAnimation_hr__active {
+  transform: scaleX(1);
+}
+
+.titleAnimation_point__active {
+  opacity: 1;
+}

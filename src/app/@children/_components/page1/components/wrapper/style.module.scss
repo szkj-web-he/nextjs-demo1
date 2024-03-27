@@ -8,18 +8,25 @@
 .page1_wrapper {
   width: 100vw;
   min-height: 108rem;
-  height: 100vh;
-  background-image: url("../../../../../../assets/images/bg_banner.png");
-  background-size: cover;
-  background-position: bottom center;
-  background-repeat: no-repeat;
-  background-color: transparent;
-  margin-top: -6.4rem;
+  height: calc(100vh - 6.4rem);
   transition: all 0.2s linear;
+  position: relative;
 }
 
 .page1_body {
   width: 140rem;
   margin: 0 auto;
   position: relative;
+  z-index: 1;
+}
+
+.page1_bannerImg {
+  width: 100%;
+  height: calc(100% + 6.4rem);
+  object-fit: cover;
+  object-position: bottom center;
+  position: absolute;
+  top: -6.4rem;
+  left: 0;
+  z-index: 0;
 }

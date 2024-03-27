@@ -21,6 +21,7 @@ import { DropdownBtn } from "../dropdownBtn";
 import { DropdownPortal } from "../dropdownPortal";
 import { Icon } from "../icon";
 import styles from "./style.module.scss";
+import classNames from "@/functions/classNames";
 /* <------------------------------------ **** DEPENDENCE IMPORT END **** ------------------------------------ */
 /* <------------------------------------ **** INTERFACE START **** ------------------------------------ */
 /** This section will include all the interface for this tsx file */
@@ -167,40 +168,43 @@ export const NavTool = forwardRef<EventProps, NavToolProps>(
 
     if (status === "success") {
       return (
-        <div className={styles.nav_tool_container}>
-          <div className={styles.nav_tool_inner}>
-            <div className={className ?? styles.nav_tool} {...props}>
-              <Dropdown
-                trigger={"hover"}
-                direction={"horizontal"}
-                placement={"lc"}
-                offset={{ x: -10 }}
-                triangle={{
-                  width: ".5rem",
-                  height: ".5rem",
-                }}
-              >
-                <DropdownBtn
-                  className={styles.nav_tool_chat}
-                  onClick={handleOpenClick}
-                >
-                  {chatTipsShow ? <Icon type="Chat" /> : <Icon type="Chat02" />}
-                </DropdownBtn>
-                <DropdownPortal
-                  handleVisibleChange={(show) => {
-                    setChatTipsShow(show);
-                  }}
-                >
-                  <div className={styles.nav_tool_chat_tooltips}>
-                    <Icon type="smile" />
-                    <span>让我们在线交谈吧！</span>
-                  </div>
-                </DropdownPortal>
-              </Dropdown>
+        <div
+          className={classNames(styles.nav_tool_container, className)}
+          {...props}
+        >
+          {/* <div className={styles.nav_tool_inner}>
+            <div className={className ?? styles.nav_tool} {...props}> */}
+          <Dropdown
+            trigger={"hover"}
+            direction={"horizontal"}
+            placement={"lc"}
+            offset={{ x: -10 }}
+            triangle={{
+              width: ".5rem",
+              height: ".5rem",
+            }}
+          >
+            <DropdownBtn
+              className={styles.nav_tool_chat}
+              onClick={handleOpenClick}
+            >
+              {chatTipsShow ? <Icon type="Chat" /> : <Icon type="Chat02" />}
+            </DropdownBtn>
+            <DropdownPortal
+              handleVisibleChange={(show) => {
+                setChatTipsShow(show);
+              }}
+            >
+              <div className={styles.nav_tool_chat_tooltips}>
+                <Icon type="smile" />
+                <span>让我们在线交谈吧！</span>
+              </div>
+            </DropdownPortal>
+          </Dropdown>
 
-              {backTopShow && backTopBtn()}
-            </div>
-          </div>
+          {backTopShow && backTopBtn()}
+          {/* </div>
+          </div> */}
         </div>
       );
     }

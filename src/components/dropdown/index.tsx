@@ -11,6 +11,7 @@ import { TriangleProps } from "./types/triangle";
 import { OffsetProps } from "./types/offset";
 import { Placement } from "./types/placement";
 import { TriggerProps } from "./types/trigger";
+import { Direction } from "./types/direction";
 /* <------------------------------------ **** DEPENDENCE IMPORT END **** ------------------------------------ */
 /* <------------------------------------ **** INTERFACE START **** ------------------------------------ */
 /** This section will include all the interface for this tsx file */
@@ -30,7 +31,7 @@ export interface MainProps {
    *  同样的属性
    *  如果设置在DropdownContent将局部有效
    */
-  direction?: "vertical" | "horizontal";
+  direction?: Direction;
   /**
    * Transition effect switch to fade
    * 过渡动画

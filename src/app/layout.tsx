@@ -6,6 +6,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "dataReachable",
+  // metadataBase: "",
   /**
    * seo
    * 长度 150-160 最优

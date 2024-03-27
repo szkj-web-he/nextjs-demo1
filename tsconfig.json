@@ -17,6 +17,8 @@
     "jsx": "preserve",
     "incremental": true,
     "newLine": "lf",
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
     "plugins": [
       {
         "name": "next"

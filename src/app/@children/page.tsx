@@ -8,7 +8,11 @@
 /** This section will include all the necessary dependence for this tsx file */
 import React from "react";
 import styles from "./style.module.scss";
-import Page1 from "./_components/page1";
+import dynamic from "next/dynamic";
+import Page2 from "./_components/page2";
+import Page3 from "./_components/page3";
+// import Page1 from "./_components/page1";
+const Page1 = dynamic(() => import("./_components/page1"));
 /* <------------------------------------ **** DEPENDENCE IMPORT END **** ------------------------------------ */
 
 /* <------------------------------------ **** FUNCTION COMPONENT START **** ------------------------------------ */
@@ -25,6 +29,8 @@ const Temp: React.FC = () => {
   return (
     <div className={styles.wrap_wrapper}>
       <Page1 />
+      <Page2 />
+      <Page3 />
       <div>
         1<br />
       </div>

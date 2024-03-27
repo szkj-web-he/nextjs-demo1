@@ -1,0 +1,21 @@
+.page2_flexItem {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-flow: row nowrap;
+  width: 45rem;
+  transform: translateY(20%);
+  opacity: 0;
+}
+
+.page2_itemContent {
+  @include c_subtitle_5;
+  color: $neutral_500;
+}
+
+.page2_itemIcon {
+  width: 6rem;
+  height: 6rem;
+  position: relative;
+  margin-right: 1.2rem;
+}

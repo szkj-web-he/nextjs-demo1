@@ -1,0 +1,157 @@
+@mixin Center() {
+  top: 20.3rem;
+  z-index: 2;
+}
+
+.page2_index1Images {
+  width: 79rem;
+  position: absolute;
+  right: -7rem;
+  z-index: 9;
+  @include Center;
+  img {
+    position: absolute;
+    // body
+    &:nth-child(1) {
+      left: 0;
+      top: 15rem;
+    }
+    // computer
+    &:nth-child(2) {
+      left: 4rem;
+      top: 28.5rem;
+    }
+    // conputerScreen
+    &:nth-child(3) {
+      left: 26rem;
+      top: -3.2rem;
+      animation: computer 2.5s ease-in-out infinite alternate;
+    }
+    // laptop
+    &:nth-child(4) {
+      left: 59rem;
+      top: 16rem;
+      animation: computer 2s ease-in-out infinite alternate;
+    }
+    // cylinder
+    &:nth-child(5) {
+      left: 57.4rem;
+      top: 20.2rem;
+      animation: computer 4.5s ease-in-out infinite alternate;
+    }
+    // questionnaire
+    &:nth-child(6) {
+      left: 12rem;
+      top: 17rem;
+      animation: questionnaire 2s ease-in infinite;
+    }
+  }
+}
+
+.page2_index2Images {
+  width: 79rem;
+  position: absolute;
+  right: -12rem;
+  z-index: 9;
+  @include Center;
+  img {
+    position: absolute;
+    // cylinderLight
+    &:nth-child(2) {
+      top: 34.2rem;
+      left: 27.2rem;
+    }
+    // cylinderHalo
+    &:nth-child(3) {
+      top: 34.2rem;
+      left: 27.6rem;
+    }
+    // cylinder2
+    &:nth-child(4) {
+      top: 36.2rem;
+      left: 27.6rem;
+      animation: cylinder 2.5s ease-in-out infinite alternate;
+    }
+    // phoneCurtain
+    &:nth-child(5) {
+      top: 23.2rem;
+      left: 3.2rem;
+    }
+    // phone
+    &:nth-child(6) {
+      top: 24rem;
+      left: 3.5rem;
+      animation: cylinder 2.5s ease-in-out infinite alternate;
+    }
+  }
+}
+
+// 圆环
+.page2_loopWrap {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 6.4rem;
+  right: 22.6rem;
+  transform: skewY(30deg);
+  img {
+    width: 100%;
+    height: 100%;
+    animation: loop 3.5s linear forwards infinite;
+  }
+}
+
+// 工具链动画
+// questionnaire
+@keyframes questionnaire {
+  0% {
+    transform: translateY(0px);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  70% {
+    transform: translateY(-70px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(-70px);
+    opacity: 0;
+  }
+}
+
+// computer
+@keyframes computer {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
+
+// 咨询培训动画
+// cylinder2
+@keyframes cylinder {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
+
+// loop
+@keyframes loop {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

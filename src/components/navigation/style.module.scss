@@ -19,8 +19,10 @@
   flex-flow: row nowrap;
   height: 6.4rem;
   position: relative;
+  border-bottom: 1px solid $neutral_200;
   &.navigation_wrapperTransparent {
     background-color: transparent;
+    border-bottom: 0;
   }
 }
 
